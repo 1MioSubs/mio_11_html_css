@@ -27,13 +27,13 @@ function pages() {
 }
 
 function fonts() {
-  return src("app/src/fonts")
+  return src("app/src/fonts/*.*")
     .pipe(
       fonter({
         formats: ["woff", "ttf"],
       })
     )
-    .pipe(src("app/fonts/*.ttf"))
+    .pipe(src("app/*.ttf"))
     .pipe(ttf2woff2())
     .pipe(dest("app/fonts"));
 }

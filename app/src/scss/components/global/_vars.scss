@@ -1,4 +1,6 @@
-$accent: #000;
+$accent: #0C3E2E;
+$textaccent: #BB8A52;
+$textmain: #0C3E2E;
 $default: #000;
 $title: #000;
 $bg: #000;
@@ -16,5 +18,38 @@ $bg: #000;
 
 %roboto-700 {
   font-family: 'Roboto-Bold', sans-serif;
+  font-weight: 700;
+}
+
+
+
+%inter-600 {
+  font-family: 'Inter-SemiBold', sans-serif;
+  font-weight: 600;
+}
+
+%inter-500 {
+  font-family: 'Inter-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%inter-700 {
+  font-family: 'Inter-Bold', sans-serif;
+  font-weight: 700;
+}
+
+
+%balsamiq-400 {
+  font-family: 'BalsamiqSans-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%kaisei-400 {
+  font-family: 'KaiseiDecol-Regular', serif;
+  font-weight: 400;
+}
+
+%manrope-700 {
+  font-family: 'Manrope-Bold', sans-serif;
   font-weight: 700;
 }
