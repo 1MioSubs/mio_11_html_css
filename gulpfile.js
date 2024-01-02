@@ -94,27 +94,25 @@ function spriteSvg() {
 }
 
 function styles() {
-  return (
-    src("app/src/scss/*.scss")
-      .pipe(scss({ outputStyle: "expanded" })) //compressed -  expanded
-      // .pipe(concat("style.min.css"))
-      .pipe(rename({ suffix: ".min" }))
-      .pipe(
-        autoprefixer({
-          overrideBrowserslist: ["last 10 versions"],
-          add: true,
-          grid: false,
-        })
-      )
-      .pipe(dest("app/css"))
-      .pipe(browserSync.stream())
-  );
+  return src("app/src/scss/*.scss")
+    .pipe(scss({ outputStyle: "compressed" })) //compressed -  expanded
+    .pipe(concat("style.css"))
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(
+      autoprefixer({
+        overrideBrowserslist: ["last 10 versions"],
+        add: true,
+        grid: false,
+      })
+    )
+    .pipe(dest("app/css"))
+    .pipe(browserSync.stream());
 }
 
 function scripts() {
   return (
     src(["app/src/javascript/src/**/*.js"])
-      // .pipe(concat("main.min.js"))
+    //   .pipe(concat("main.js"))
       .pipe(rename({ suffix: ".min" }))
       .pipe(uglify())
       .pipe(dest("app/js"))
