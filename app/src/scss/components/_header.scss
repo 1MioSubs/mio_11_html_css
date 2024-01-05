@@ -2,10 +2,56 @@
   background-image: url(../images/header-bg.svg);
   background-repeat: no-repeat;
   background-position: top center;
+  margin-bottom: 150px;
+
+  &__inner{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   &-top{
     padding-top: 32px;
     display: flex;
     justify-content: space-between;
+  }
+
+  &__title{
+    @extend %inter-600;
+    font-size: 48px;
+    margin: 20px 0 80px;
+    max-width: 428px;
+  }
+
+  &__text{
+    font-size: 24px;
+    text-align: center;
+    padding: 25px 0;
+  }
+
+  &-content{
+    &__inner{
+      justify-content: space-between;
+      display: flex;
+      gap: 0 20px;
+      align-items: center;
+    }
+
+    &__text{
+      max-width: 510px;
+      span{
+        color: $accent;
+      }
+    }
+
+    &__btn{
+      background-color: $btnbg;
+      padding: 20px 32px;
+      display: inline-block;
+      margin-top: 50px;
+      font-size: 20px;
+    }
   }
 
   .menu{

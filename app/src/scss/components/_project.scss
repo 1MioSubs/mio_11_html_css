@@ -1,0 +1,40 @@
+.projects{
+  margin-bottom: 110px;
+
+  &__text {
+    margin-bottom: 30px;
+    max-width: 595px;
+  }
+
+  &__gallery{
+    display: grid;
+    gap: 40px 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    &-item{
+      &.rows-item{
+        grid-area: span 2;
+      }
+    }
+    &-text{
+      text-align: center;
+      padding: 20px 0;
+    }
+    &-img{
+      border-radius: 40px;
+      border: 1px solid #FFBA00;
+      max-width: 396px;
+      max-height: 279px;
+      width: 100%;
+      height: 100%;
+      &.img-g{
+        max-height: 577px;
+        height: 100%;
+      }
+    }
+  }
+
+  &__inner{
+
+  }
+}

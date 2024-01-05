@@ -1,0 +1,40 @@
+.why {
+  margin-bottom: 150px;
+
+  &__text {
+    margin-bottom: 40px;
+    max-width: 580px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 0 22px;
+
+    &-list {
+      list-style-type: none;
+      counter-reset: my-counter;
+      padding-left: 10px;
+    }
+    &-item {
+      font-size: 28px;
+      &.pl-60 {
+        padding-left: 60px;
+      }
+      &.pl-90 {
+        padding-left: 90px;
+      }
+      &::before {
+        content: counter(my-counter);
+        counter-increment: my-counter;
+        padding-right: 5px;
+      }
+    }
+    &-item + .why__inner-item {
+      margin-top: 55px;
+    }
+  }
+
+  &__img {
+  }
+}
