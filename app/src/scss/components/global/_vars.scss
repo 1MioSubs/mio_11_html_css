@@ -9,6 +9,14 @@ $default: #000;
 $title: #000;
 $bg: #000;
 
+%btnres{
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
 
 %roboto-400 {
   font-family: 'Roboto-Regular', sans-serif;

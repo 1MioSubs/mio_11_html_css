@@ -1,0 +1,33 @@
+.questions{
+  margin-bottom: 150px;
+  &__inner{
+
+  }
+}
+.accordeon{
+  column-count: 2;
+  gap: 0 22px;
+  &__item{
+    margin-bottom: 40px;
+  }
+  &__title{
+    margin-bottom: 15px;
+    font-size: 24px;
+    @extend %btnres;
+    padding-right: 70px;
+    position: relative;
+    width: 100%;
+    &::after{
+      content: '';
+      position: absolute;
+      background-image: url(../images/arow-d.svg);
+      width: 15px;
+      height: 26px;
+      top: 3px;
+      right: 40px;
+    }
+  }
+  &__descr{
+    display: none;
+  }
+}
