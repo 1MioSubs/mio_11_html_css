@@ -1,0 +1,25 @@
+.team{
+  margin-bottom: 150px;
+
+  &__text{
+    margin-bottom: 58px;
+    max-width: 700px;
+  }
+
+  &__list{
+    display: flex;
+    justify-content: center;
+    gap: 0 50px;
+  }
+
+  &__item{
+    width: 200px;
+    &-img{
+      border: 1px solid $btnbg;
+    }
+    &-name{
+      padding: 10px 0 15px;
+      text-align: center;
+    }
+  }
+}

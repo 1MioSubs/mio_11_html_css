@@ -205,14 +205,25 @@ exports.building = building;
 
 exports.resprite = series(cleanSprite, spriteSvg);
 exports.build = series(cleanDist, building);
-exports.default = parallel(
+exports.default = watching;
+exports.start = series(
   styles,
   scripts,
   fonts,
   scriptsLibs,
-  series(imagesAll, spriteSvg),
+  imagesAll,
+  spriteSvg,
   imagesAvif,
   imagesWebp,
-  pages,
-  watching
+  pages
 );
+// exports.default = parallel(
+//     styles,
+//     scripts,
+//     fonts,
+//     scriptsLibs,
+//     series(imagesAll, spriteSvg),
+//     imagesAvif,
+//     imagesWebp,
+//     pages
+//   );

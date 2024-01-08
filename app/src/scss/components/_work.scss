@@ -1,4 +1,33 @@
 .work{
+  margin-bottom: 150px;
+
+  &__list{
+    list-style-type: none;
+    counter-reset: my-counter;
+    max-width: 1056px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 15px;
+  }
+  
+  &__item{
+    font-size: 28px;
+    position: relative;
+    line-height: 185px;
+    padding-left: 64px;
+    &::before{
+      content: counter(my-counter, decimal-leading-zero);
+      counter-increment: my-counter;
+      @extend %kaisei-400;
+      font-size: 128px;
+      color: $numcol;
+      letter-spacing: -12px;
+      position: absolute;
+      left: 0;
+    }
+  }
+
   &__inner{
     
   }
