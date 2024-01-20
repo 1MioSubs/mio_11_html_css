@@ -1,5 +1,18 @@
 .contacts{
+  margin-bottom: 150px;
   &__inner{
-    
+    display: flex;
+    gap: 0 22px;
+  }
+  &__text{
+    font-size: 28px;
+    @extend %inter-600;
+    margin-bottom: 70px;
+  }
+  &__info{
+    font-size: 20px;
+    dt{
+      margin-top: 20px;
+    }
   }
 }
