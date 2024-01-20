@@ -1,0 +1,45 @@
+.footer{
+  background-color: $footercolor;
+  padding: 40px 0 47px;
+  &__inner{
+    display: flex;
+    gap: 0 22px;
+  }
+  &__left{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__menu{
+    font-size: 20px;
+    &-item{
+      margin-bottom: 20px;
+    }
+  }
+  .social{
+    &__list{
+      display: flex;
+      gap: 0 20px;
+    }
+  }
+
+
+
+  &__right{
+    width: 100%;  
+    padding-left: 30px;
+  }
+  &__logo{
+    img{
+      width: 137px;
+      height: 87px;
+      margin-bottom: 42px;
+    }
+  }
+  &__text{
+    @extend %inter-600;
+    font-size: 36px;
+    max-width: 322px;
+  }
+}
