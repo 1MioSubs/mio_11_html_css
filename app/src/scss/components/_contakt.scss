@@ -1,6 +1,72 @@
-.contakt-form{
+.contakt-form {
   margin-bottom: 150px;
-  &__inner{
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__text {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  &__images{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    // grid-template-rows: repeat(2, 1fr);
+  }
+  &__img{
+    border-radius: 40px;
+    &--mod{
+      grid-column: 1 / -1;
+    }
+  }
 
+  .form {
+    &__text {
+      margin-bottom: 15px;
+    }
+    &__input {
+      max-width: 520px;
+      width: 100%;
+      display: inline-block;
+      border: none;
+      margin-bottom: 10px;
+      border-bottom: 1px solid $forbborder;
+      padding: 5px 10px;
+      margin-left: 28px;
+      font-size: 24px;
+      color: $forbborder;
+      @extend %inter-500;
+      line-height: 1.2;
+      &::placeholder {
+        font-size: 24px;
+        color: $forbplaceholder;
+        @extend %inter-500;
+        line-height: 1.2;
+      }
+    }
+    &__btn {
+      background-color: $btnbg;
+      display: inline-block;
+      border: none;
+      padding: 20px 41px;
+      margin-top: 20px;
+      font-size: 20px;
+      @extend %inter-500;
+      line-height: 1.2;
+      color: $textmain;
+      margin-bottom: 30px;
+      cursor: pointer;
+    }
+    &__link{
+      display: flex;
+      align-items: center;
+      img {
+        margin-left: 31px;
+      }
+      span {
+        border-bottom: 1px solid $textmain;
+      }
+    }
   }
 }

@@ -215,7 +215,8 @@ exports.start = series(
   spriteSvg,
   imagesAvif,
   imagesWebp,
-  pages
+  pages,
+  watching
 );
 // exports.default = parallel(
 //     styles,
