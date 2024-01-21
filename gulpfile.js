@@ -131,6 +131,7 @@ function scriptsLibs() {
       // "node_modules/rateyo/src/jquery.rateyo.js",
       // "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js",
       // "node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js",
+      "node_modules/swiper/swiper-bundle.min.js",
       "app/src/javascript/libs/**/*.js",
     ])
       .pipe(concat("libs.min.js"))
@@ -149,8 +150,8 @@ function watching() {
     notify: false,
   });
   watch(["app/src/scss/**/*.scss"], styles);
-  watch(["app/js/src/**/*.js"], scripts);
-  watch(["app/js/libs/**/*.js"], scriptsLibs);
+  watch(["app/src/javascript/src/**/*.js"], scripts);
+  watch(["app/src/javascript/libs/**/*.js"], scriptsLibs);
   watch(["app/src/html/**/*.html"], pages);
   watch(["app/src/fonts/**/*.*"], fonts);
   watch(["app/src/images"], series(imagesAll, imagesAvif, imagesWebp));
@@ -228,3 +229,4 @@ exports.start = series(
 //     imagesWebp,
 //     pages
 //   );
+

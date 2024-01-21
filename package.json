@@ -34,5 +34,8 @@
     "rateyo": "^2.3.2",
     "sass": "^1.64.2",
     "slick-carousel": "^1.8.1"
+  },
+  "dependencies": {
+    "swiper": "^11.0.5"
   }
 }
